@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Drink Menu</title>
 	<style>
+	body, html {
+		height: 100%;
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		}
+	* {
+		box-sizing: border-box;
+		}
 	.bg-img {
 		background-image: url("bar.jpeg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		filter: blur(10px);
+		filter: blur(5px);
 		z-index: -1;
-		height: 100%
+		height: 100%;
+		}
+	.bg-text {
+		background-color: rgb(0,0,0);
+  		background-color: rgba(0,0,0, 0.6);
+  		color: peachpuff;
+  		font-weight: bold;
+ 		border: 3px solid #f1f1f1;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+	  	z-index: 2;
+		width: 80%;
+	  	padding: 20px;
+	  	text-align: center;
+	}
+	.menu	{
+ 		color: peachpuff;
+  		width: 140px;
+  		height: 40px;
+  		line-height: 40px;
+  		background: rgba(0,0,0, 0.8);
+  		cursor: pointer;
+  		font-size: 17px;
 		}
 	</style>
 </head>
@@ -19,12 +52,16 @@
   <center>
     <h1 style="color: white"><b><u>Drink Menu</u></b></h1>
     <br><br><br><br><br>
-    <label for="drinkSelection">Choose your drink:</label>
-    <select id="drinkSelection">
+    <div class="bg-text">
+    <h1><b><u>Drink Menu</u></b></h1>
+    <br><br>
+    <select class="menu" >
       <option>Apple Juice</option>
       <option>Orange Juice</option>
       <option>Coconut water</option>
     </select>
+    <br><br>
+    </div>
   </center>
 </body>
 </html>
